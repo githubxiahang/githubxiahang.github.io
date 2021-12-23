@@ -115,7 +115,8 @@
 				return i
 			}
 			var date = new Date();
-	document.getElementById('outtime').innerText=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 06:30:00"+" 至 "+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 21:30:00";
+	document.getElementById('outtime').innerText=date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" "+checkTime(date.getHours())+":"+checkTime(date.getMinutes())+":"+checkTime(date.getSeconds());
+        document.getElementById('outtime').innerText=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 06:30:00"+" 至 "+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 21:30:00";
         document.getElementById('lasttime').innerText="申请下发完成时间："+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+(date.getDate()-1)+" 18:31:21";
 
    </script>
