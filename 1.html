@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 <head>
 <style>
-.header {
+#header{
     background-color:#5AB532;
     color:white;
     font-size:12px;
@@ -11,30 +11,32 @@
     text-align:center;
     padding-top: 5px;
 }
-.ivi {
+#ivi{
     text-align:center;
     padding:5px;
     text-align:center;
 }
-.nav {
+#nav{
     line-height:25px;
     background-color:white;
 }
-#section {
+#section{
     background-color:white;
     color:black;
 }
-.footer {
+.footer{
    font-size:9px;
    text-align:center;
-   padding:0px;	 	 
+   color:red;
+   margin-top:-5px;
+   margin-bottom:15px;	 	 
 }
 .foot1{
    font-size:12px;
    text-align:center;
    padding:0px;	
 }
-.cc {
+.cc{
 	color: #F5F5F5;
 	font-size: 12px;
 	line-height: 20px;
@@ -82,7 +84,7 @@
 <p style="font-size:12px;margin-top:5px" align="center" >最近一次有效出入申请时间(未过期)</p>
 </div>
 
-<div class="footer" id="outime">2021-10-10 21:21:21</div>
+<div class="footer" id="outtime">2021-10-10 21:21:21</div>
 
 <p style="font-size:12px;margin-top:-5px"  align="center"> 申请已下发完成，可以正常出入校门 </p>
 <div class="foot1" id="lasttime" > 2021-12-22 19:32:26 </div>
@@ -105,17 +107,18 @@
 .
 </div>
 
-<script type="text/javascript">
-		
-			function checkTime(i)
+   <script type="text/javascript">
+
+            function checkTime(i)
 			{
 			if (i<10)
 				{i="0" + i}
 				return i
 			}
-			var date = new Date();
-			document.getElementById('outtime').innerText=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 06:30:00"+" 至 "+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 21:30:00"
-            document.getElementById('lasttime').innerText="申请下发完成时间："+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+(date.getDate()-1)+" 18:31:21";
+			var date = new Date()
+        document.getElementById('outtime').innerText=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 06:30:00"+" 至 "+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()+" 21:30:00";
+        document.getElementById('lasttime').innerText="申请下发完成时间："+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+(date.getDate()-1)+" 18:31:21";
 
+   </script>
 </body>
 </html>
