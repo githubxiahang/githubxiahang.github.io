@@ -1,5 +1,5 @@
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">    
+<meta charset="UFT-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">    
 <style>
 html{   
     width: 100%;   
@@ -61,7 +61,7 @@ input{
 }  
 </style>
 
-<body>
+<body background="yyds.jpg" style="background-repeat: no-repeat; background-size:100% 100%;">
     <div id="login">
         <h1>Login</h1>
         <form name="f" action="">
@@ -83,6 +83,7 @@ input{
    var pass=document.getElementById("pass").value;
    if(name=="xdm" && pass=="666"){
    alert("登入成功");
+   window.location = '1.html';
    window.document.f.action="1.html";
    window.document.f.submit();
    }else{
